@@ -134,11 +134,4 @@
   border-radius: 50%;
 }
 
-.pa-0 {
-  padding: 0 !important;
-}
-
-.ma-0 {
-  margin: 0 !important;
-}
 </style>
