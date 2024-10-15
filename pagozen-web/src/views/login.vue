@@ -2,7 +2,7 @@
   import { ref } from 'vue'
   import { useRouter } from 'vue-router';
 
-  import LogInLogo  from '../components/LogInLogo.vue'
+  import LogInLogo  from '@/components/LogInLogo.vue'
 
 
   const email = ref('')
@@ -109,5 +109,35 @@
 
 
 
-<style>
+<style scoped>
+.fill-height {
+  min-height: 100vh;
+  background-color: #1e3a8a;
+  background-image: linear-gradient(135deg, #1e3a8a, #3b82f6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.v-card {
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.v-btn {
+  font-weight: bold;
+}
+
+.v-img {
+  border-radius: 50%;
+}
+
+.pa-0 {
+  padding: 0 !important;
+}
+
+.ma-0 {
+  margin: 0 !important;
+}
 </style>
