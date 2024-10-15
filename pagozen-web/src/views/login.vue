@@ -1,13 +1,46 @@
+<script setup>
+  import { ref } from 'vue'
+  import { useRouter } from 'vue-router';
+
+  import LogInLogo  from '../components/LogInLogo.vue'
+
+
+  const email = ref('')
+  const password = ref('')
+  const router = useRouter()
+
+  const handleSubmit = () => {
+    console.log('Iniciar sesión con:', email.value, password.value)
+  }
+
+  const register = () => {
+    console.log('Redirigiendo a registro')
+    router.push('/register')
+  }
+
+  const loginWithGoogle = () => {
+    console.log('Iniciar sesión con Google')
+  }
+
+  const loginWithApple = () => {
+    console.log('Iniciar sesión con Apple')
+  }
+
+  const loginWithFacebook = () => {
+    console.log('Iniciar sesión con Facebook')
+  }
+
+  const recoverPassword = () => {
+    console.log('Redirigiendo a recuperación de contraseña')
+  }
+</script>
+
 <template>
   <v-container class="fill-height">
     <v-row class="d-flex justify-center align-center">
       <v-col cols="12" sm="8" md="4">
         <v-card>
-          <v-card-title class="text-h6 d-flex justify-center">
-            <v-avatar size="80">
-              <img src="D:\GitHub\hci-proto-web\pagozen-web\src\assets\logo.png?height=80&width=80" alt="Space Logo" />
-            </v-avatar>
-          </v-card-title>
+          <LogInLogo/>
           <v-card-text>
             <v-form @submit.prevent="handleSubmit">
               <v-text-field
@@ -74,37 +107,7 @@
   </v-container>
 </template>
 
-<script setup>
-import { ref } from 'vue'
 
-const email = ref('')
-const password = ref('')
 
-const handleSubmit = () => {
-  console.log('Iniciar sesión con:', email.value, password.value)
-}
-
-const register = () => {
-  console.log('Redirigiendo a registro')
-}
-
-const loginWithGoogle = () => {
-  console.log('Iniciar sesión con Google')
-}
-
-const loginWithApple = () => {
-  console.log('Iniciar sesión con Apple')
-}
-
-const loginWithFacebook = () => {
-  console.log('Iniciar sesión con Facebook')
-}
-
-const recoverPassword = () => {
-  console.log('Redirigiendo a recuperación de contraseña')
-}
-</script>
-
-<style scoped>
-/* Estilos personalizados para Vuetify */
+<style>
 </style>
