@@ -112,6 +112,7 @@
 <style scoped>
 .fill-height {
   min-height: 100vh;
+  min-width: 100vw;
   background-color: #1e3a8a;
   background-image: linear-gradient(135deg, #1e3a8a, #3b82f6);
   display: flex;
