@@ -10,42 +10,42 @@
     const aceptaTerminos = ref(false)
 
     const getCountries = () => {
-    const countries = Country.getAllCountries(); 
-    nacionalidades.value = countries.map(country => country.name); 
+        const countries = Country.getAllCountries(); 
+        nacionalidades.value = countries.map(country => country.name); 
     };
 
     onMounted(() => {
         getCountries();
     });
     const submitForm = () => {
-    if (aceptaTerminos.value && nombre.value != ''  && apellido.value != '' && nacionalidad.value != '') {
+        if (aceptaTerminos.value && nombre.value != ''  && apellido.value != '' && nacionalidad.value != '') {
 
-        // Handle form submission
-        console.log('Form submitted:', { nombre: nombre.value, apellido: apellido.value, nacionalidad: nacionalidad.value })
-    }
-    else if (nombre.value == '')
-    {
-        alert('Falta completar tu Nombre')
-    }
-    else if (apellido.value == '')
-    {
-        alert('Falta completar tu Apellido')
-    }
-    else if ( nacionalidad.value == '')
-    {
-        alert('Falta completar tu Nacionalidad')
-    }
-    else {
-        alert('Debes aceptar los términos y condiciones.')
-    }
+            // Handle form submission
+            console.log('Form submitted:', { nombre: nombre.value, apellido: apellido.value, nacionalidad: nacionalidad.value })
+        }
+        else if (nombre.value == '')
+        {
+            alert('Falta completar tu Nombre')
+        }
+        else if (apellido.value == '')
+        {
+            alert('Falta completar tu Apellido')
+        }
+        else if ( nacionalidad.value == '')
+        {
+            alert('Falta completar tu Nacionalidad')
+        }
+        else {
+            alert('Debes aceptar los términos y condiciones.')
+        }
     }
 
     const cancelForm = () => {
 
-    nombre.value = ''
-    apellido.value = ''
-    nacionalidad.value = ''
-    aceptaTerminos.value = false
+        nombre.value = ''
+        apellido.value = ''
+        nacionalidad.value = ''
+        aceptaTerminos.value = false
     }
 </script>
 
