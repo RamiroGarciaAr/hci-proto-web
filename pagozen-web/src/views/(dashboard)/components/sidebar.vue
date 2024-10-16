@@ -1,6 +1,8 @@
 
 <script setup>
     import SidebarItem from '@/views/(dashboard)/components/sidebar-item.vue';
+    import SidebarUser from '@/views/(dashboard)/components/sidebar-user.vue';
+
     import { ref } from 'vue';
     const items = ref([
         {
@@ -24,10 +26,10 @@
     const name = import.meta.env.VITE_APP_NAME
 </script>
 <template>
-    <div class="flex flex-col bg-primary-500 text-primary-900 rounded-md m-4 p-4 min-h-[calc(100vh-2rem)]"> 
-        <span>Sidebar</span>
+    <div class="flex flex-col bg-primary-500 text-primary-900 rounded-md p-4 py-4 min-h-[calc(100vh-2rem)]"> 
+        <SidebarUser />
         
-        <ul class="flex flex-col gap-2 flex-1">
+        <ul class="flex flex-col gap-2 flex-1 py-10">
             <li v-for="(item, index) in items"> 
                 <SidebarItem :item="item" />
             </li> 
