@@ -6,6 +6,8 @@
 
 // Plugins
 import { registerPlugins } from '@/plugins'
+import { MotionPlugin } from '@vueuse/motion'
+
 
 //Router
 import router from './router'
@@ -22,5 +24,5 @@ const app = createApp(App)
 registerPlugins(app)
 
 app.use(router)
-
+app.use(MotionPlugin)
 app.mount('#app')

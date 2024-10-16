@@ -1,6 +1,7 @@
 <script setup>
     import LogInLogo from '@/views/(authentication)/components/LogInLogo.vue'; // Ensure the path is correct
     import { ref , onMounted} from 'vue';
+    import { useRouter } from 'vue-router';
     import {Country} from 'country-state-city';
 
     const nombre = ref('');
@@ -9,6 +10,7 @@
     const nacionalidades = ref([]);
     const aceptaTerminos = ref(false)
 
+    const router = useRouter()
     const getCountries = () => {
         const countries = Country.getAllCountries(); 
         nacionalidades.value = countries.map(country => country.name); 
@@ -46,6 +48,8 @@
         apellido.value = ''
         nacionalidad.value = ''
         aceptaTerminos.value = false
+
+        router.push('/login')
     }
 </script>
 
@@ -106,31 +110,3 @@
     </v-row>
   </v-container>
 </template>
-
-<style scoped>
-.fill-height {
-  min-height: 100vh;
-  min-width: 100vw;
-  background-color: #1e3a8a;
-  background-image: linear-gradient(135deg, #1e3a8a, #3b82f6);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.v-card {
-  border-radius: 20px;
-  padding: 40px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.v-btn {
-  font-weight: bold;
-}
-
-.v-img {
-  border-radius: 50%;
-}
-
-</style>  
-  

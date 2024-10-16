@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@mdi/font": "7.4.47",
+    "@vueuse/motion": "^2.2.6",
     "country-state-city": "^3.2.1",
     "roboto-fontface": "*",
     "vue": "^3.4.31",
