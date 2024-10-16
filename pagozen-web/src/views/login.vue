@@ -36,7 +36,8 @@
 </script>
 
 <template>
-  <v-container class="fill-height">
+  <!-- <v-container class="fill-height"> -->
+  <v-container class="flex items-center justify-center min-w-[100vw] h-screen bg-gradient-to-r from-primary-400 to-primary-600">
     <v-row class="d-flex justify-center align-center">
       <v-col cols="12" sm="8" md="4">
         <v-card>
