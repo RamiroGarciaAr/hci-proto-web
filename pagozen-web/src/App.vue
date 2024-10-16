@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="bg-primary-100 min-h-screen">
     <router-view></router-view> <!-- Esto renderizará la vista según la ruta -->
   </div>
 </template>
