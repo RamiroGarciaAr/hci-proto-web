@@ -1,5 +1,5 @@
 <script setup>
-    import LogInLogo from '@/components/LogInLogo.vue'; // Ensure the path is correct
+    import LogInLogo from '@/views/(authentication)/components/LogInLogo.vue'; // Ensure the path is correct
     import { ref , onMounted} from 'vue';
     import {Country} from 'country-state-city';
 

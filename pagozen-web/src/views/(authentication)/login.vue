@@ -2,7 +2,7 @@
   import { ref } from 'vue'
   import { useRouter } from 'vue-router';
 
-  import LogInLogo  from '@/components/LogInLogo.vue'
+  import LogInLogo  from '@/views/(authentication)/components/LogInLogo.vue'
 
 
   const email = ref('')

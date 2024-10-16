@@ -1,23 +1,32 @@
 import Contact from '@/views/(dashboard)/contacts/index.vue';
 import Home from '@/views/(dashboard)/home/index.vue';
 import Dashboard from '@/views/(dashboard)/layout.vue';
-import Login from '@/views/login.vue';
-import Register from '@/views/register.vue';
+import Authentication from '@/views/(authentication)/layout.vue'
+import Login from '@/views/(authentication)/login.vue';
+import Register from '@/views/(authentication)/register.vue';
 
 import { createRouter, createWebHistory } from 'vue-router';
 
 const routes = [
     
   {
-    path: '/',
-    name: 'Login',
-    component: Login, 
+    path: '/authentication',
+    name: 'Authentication',
+    component: Authentication,
+    children: [
+      {
+        path: '/',
+        name: 'Login',
+        component: Login
+      },
+      {
+        path: '/register',
+        name: 'Register',
+        component: Register
+      },
+    ] 
   },
-  {
-    path: '/register',
-    name: 'Register',
-    component: Register
-  },
+
   {
     path: '/dashboard',
     name: 'Dashboard',
